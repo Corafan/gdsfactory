@@ -74,7 +74,7 @@ def import_gds(
         D._cell = c
         if not keep_name_short:
             max_name_length = 10000000000000
-        D.rename(c.name, cache=unique_names, max_name_length=max_name_length)
+        D.rename(c.name, max_name_length=max_name_length)
 
         cell_name_to_component[c.name] = D
         cell_to_component[c] = D
