@@ -53,7 +53,7 @@ def show(
         msg = ""
         try:
             msg = conn.recv(1024).decode("utf-8")
-            config.logger.info(f"Message from klive: {msg}")
+            config.logger.debug(f"Message from klive: {msg}")
         except OSError:
             warnings.warn.warning("klive didn't send data, closing")
         finally:
